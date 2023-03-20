@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Current
+mipt_math_and_ml_algs_env/
+*env

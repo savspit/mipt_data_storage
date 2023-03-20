@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="HealthcareAnalysis" id="Project-431" database="Sqlite" >
+	<schema name="Default" >
+		<table name="First_Health_Camp_Attended" generator_rows="150" >
+			<column name="Patient_ID" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="Health_Camp_ID" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="Donation" type="INTEGER" jt="4" />
+			<column name="Health_Score" type="FLOAT" length="1" decimal="10" jt="7" />
+			<column name="ID" prior="Column1" type="BIGINT" jt="-5" mandatory="y" />
+			<index name="pk_First_Health_Camp_Attended" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+			<fk name="fk_patient_id" to_schema="Default" to_table="Patient_Profile" >
+				<fk_column name="Patient_ID" pk="Patient_ID" />
+			</fk>
+			<fk name="fk_health_camp_id" to_schema="Default" to_table="Health_Camp_Detail" >
+				<fk_column name="Health_Camp_ID" pk="Health_Camp_ID" />
+			</fk>
+		</table>
+		<table name="Health_Camp_Detail" generator_rows="100" >
+			<column name="Health_Camp_ID" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="Camp_Start_Date" type="DATE" jt="91" />
+			<column name="Camp_End_Date" type="DATE" jt="91" />
+			<column name="Category1" type="VARCHAR" length="10" jt="12" />
+			<column name="Category2" type="CHAR" length="1" jt="1" />
+			<column name="Category3" type="INTEGER" jt="4" />
+			<index name="pk_Tbl" unique="PRIMARY_KEY" >
+				<column name="Health_Camp_ID" />
+			</index>
+		</table>
+		<table name="Patient_Profile" generator_rows="100" >
+			<column name="Patient_ID" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="Online_Follower" type="BOOLEAN" jt="-7" />
+			<column name="LinkedIn_Shared" type="BOOLEAN" jt="-7" />
+			<column name="Twitter_Shared" type="BOOLEAN" jt="-7" />
+			<column name="Facebook_Shared" type="BOOLEAN" jt="-7" />
+			<column name="Income" type="INTEGER" jt="4" />
+			<column name="Education_Score" type="FLOAT" length="3" decimal="10" jt="7" />
+			<column name="Age" type="INTEGER" jt="4" />
+			<column name="First_Interaction" type="DATE" jt="91" />
+			<column name="City_Type" type="CHAR" length="1" jt="1" />
+			<column name="Employer_Category" type="VARCHAR" length="50" jt="12" />
+			<index name="pk_Patient_Profile" unique="PRIMARY_KEY" >
+				<column name="Patient_ID" />
+			</index>
+		</table>
+		<table name="Second_Health_Camp_Attended" generator_rows="150" >
+			<column name="Patient_ID" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="Health_Camp_ID" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="Health Score" type="FLOAT" length="1" decimal="10" jt="7" />
+			<column name="ID" type="BIGINT" jt="-5" mandatory="y" />
+			<index name="pk_Second_Health_Camp_Attended" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+			<fk name="fk_patient_id" to_schema="Default" to_table="Patient_Profile" >
+				<fk_column name="Patient_ID" pk="Patient_ID" />
+			</fk>
+			<fk name="fk_health_camp_id" to_schema="Default" to_table="Health_Camp_Detail" >
+				<fk_column name="Health_Camp_ID" pk="Health_Camp_ID" />
+			</fk>
+		</table>
+		<table name="Third_Health_Camp_Attended" generator_rows="150" >
+			<column name="Patient_ID" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="Health_Camp_ID" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="Number_of_stall_visited" type="INTEGER" jt="4" />
+			<column name="Last_Stall_Visited_Number" type="INTEGER" jt="4" />
+			<column name="ID" type="BIGINT" jt="-5" mandatory="y" />
+			<index name="pk_Third_Health_Camp_Attended" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+			<fk name="fk_patient_id" to_schema="Default" to_table="Patient_Profile" >
+				<fk_column name="Patient_ID" pk="Patient_ID" />
+			</fk>
+			<fk name="fk_health_camp_id" to_schema="Default" to_table="Health_Camp_Detail" >
+				<fk_column name="Health_Camp_ID" pk="Health_Camp_ID" />
+			</fk>
+		</table>
+	</schema>
+	<connector name="Sqlite" database="Sqlite" driver_class="org.sqlite.JDBC" driver_jar="sqlite-jdbc-3.40.0.0.jar" driver_desc="Standard" host="localhost" port="7210" instance="//NAS/main/Антон/Магистратура/мфти/Науки о данных/Обучение/Лекции/Системы хранения и обработки данных/HW1/HealthcareAnalysis.dbs" useSystemProxy="false" />
+	<layout name="Default Layout" id="Layout-1fe3" show_relation="columns" >
+		<entity schema="Default" name="First_Health_Camp_Attended" color="C1D8EE" x="1184" y="48" />
+		<entity schema="Default" name="Health_Camp_Detail" color="C1D8EE" x="1680" y="112" />
+		<entity schema="Default" name="Patient_Profile" color="C1D8EE" x="752" y="96" />
+		<entity schema="Default" name="Second_Health_Camp_Attended" color="C1D8EE" x="1184" y="208" />
+		<entity schema="Default" name="Third_Health_Camp_Attended" color="C1D8EE" x="1184" y="352" />
+		<callout x="48" y="64" pointer="Round" >
+			<comment><![CDATA[This is a layout - a diagram with tools.
+- Right-click the layout to create new tables. 
+- Double-click table headers to edit. 
+- For a better understanding of the schema, create multiple layouts.
+- The schema will be saved to the model file. 
+- Later, you can connect to any database and deploy the schema into the database.]]></comment>
+		</callout>
+	</layout>
+</project>
