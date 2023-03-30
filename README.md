@@ -8,4 +8,20 @@
 
 ### [Домашняя работа 1. Часть 2](https://github.com/savspit/mipt_data_storage/blob/main/homeworks/hw1/part2/)
 
+<br/>
 
+### [Домашняя работа 2](https://github.com/savspit/mipt_data_storage/blob/main/homeworks/hw2/)
+
+
+
+
+### Локальный запуск в Visual Studio Code
+
+```
+python3.9 -m venv mipt_data_storage_env
+pip3 install --upgrade pip
+pip3 install pandas
+pip3 install sqlite3
+pip3 install dash
+pip3 install jupyter-dash
+```

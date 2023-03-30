@@ -129,5 +129,6 @@ dmypy.json
 .pyre/
 
 # Current
-mipt_math_and_ml_algs_env/
+mipt_data_storage_env/
 *env
+*.db
