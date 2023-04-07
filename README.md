@@ -12,6 +12,9 @@
 
 ### [Домашняя работа 2](https://github.com/savspit/mipt_data_storage/blob/main/homeworks/hw2/)
 
+<br/>
+
+### [Домашняя работа 3](https://github.com/savspit/mipt_data_storage/blob/main/homeworks/hw3/)
 
 
 
