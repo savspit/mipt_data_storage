@@ -16,6 +16,10 @@
 
 ### [Домашняя работа 3](https://github.com/savspit/mipt_data_storage/blob/main/homeworks/hw3/)
 
+<br/>
+
+### [Домашняя работа 4](https://github.com/savspit/mipt_data_storage/blob/main/homeworks/hw4/)
+
 
 
 ### Локальный запуск в Visual Studio Code
